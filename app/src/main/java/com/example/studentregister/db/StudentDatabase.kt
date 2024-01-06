@@ -28,7 +28,7 @@ abstract class StudentDatabase : RoomDatabase() {
 
         fun getInstance(context: Context): StudentDatabase {
 
-            // to avoid concurrent execution by multiple threads
+            // synchronized -> to avoid concurrent execution by multiple threads
             // by holding the monitior
             // ref: https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-synchronized/
 

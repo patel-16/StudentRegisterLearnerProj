@@ -16,6 +16,13 @@ import androidx.room.Update
 // insert, update, delete do not require sql queries, I guess auto generated,
 // but not for query operation
 
+// you might be thinking of some connection between
+// this file and the StudentDatabase file
+// it appears it is like Dao -> Entity(Student.kt, @Entity annotn) -> DB (StudentDatabase.kt)
+
+// member functions of interface do not have any implementations
+// but in newer versions of Java/Kotlin, I think they allowed some
+// exceptions (static, default functions)
 
 @Dao
 interface StudentDao {

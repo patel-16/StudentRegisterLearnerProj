@@ -16,6 +16,13 @@ abstract class StudentDatabase : RoomDatabase() {
     abstract fun studentDao(): StudentDao
 
     // something of kind of static members, belonging to the class
+
+    // companion Object and getInstance -> I believe to ensure the singleton pattern
+    // single object of a class (since making a db is expensive)
+    // also it makes sense to have a single source of truth I guess
+    // (How they make multiple DB for safety from failures appears to be
+    // a cloud concept...let us see..)
+
     companion object {
 
         // Volatile allows for writes to be immeditely visible to other threads
